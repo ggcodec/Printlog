@@ -12,7 +12,7 @@ func(n *NewLog) FmtDebug(data ...interface{}) {
 	}
 	str := timeStr("Debug", data)
 
-	_, err := fmt.Fprintln(os.Stdout, colorStr(33, str))
+	_, err := fmt.Fprintf(os.Stdout, colorStr(33, str))
 	if err != nil {
 		return
 	}
