@@ -11,3 +11,5 @@
   1. 导入报名`import lo github.com/ggcodec/Printlog`（如果觉得包名长可以起别名）
   2. 使用NewPringlog() 得到一个log实例，通过log实例操作
   3. 方法分为两类一类Fmt方法向终端输出日志，第二类File方法向文件输入
+
+注意：请谨慎使用FmtPanic 和 FilePanic 这会让你的程序造成恐慌并退出
