@@ -27,7 +27,7 @@ func NewPrintlog () *NewLog {
 
 
 func colorStr(colorInt int, str string) string {
-	return fmt.Sprintf("\x1b[%dm%s \x1b[0m", colorInt, str)
+	return fmt.Sprintf("\x1b[%dm%s \x1b[0m\n", colorInt, str)
 }
 
 func timeStr(level string, data []interface{}) string {
