@@ -9,7 +9,7 @@ import (
 func(n *NewLog) FmtInfo(data ...interface{}) {
 	str := timeStr("Info", data)
 
-	_, err := fmt.Fprintln(os.Stdout, colorStr(32, str))
+	_, err := fmt.Fprintf(os.Stdout, colorStr(32, str))
 	if err != nil {
 		return
 	}
