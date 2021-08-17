@@ -5,7 +5,7 @@ import (
 	"os"
 )
 
-// FmtPanic  向终端输出 虽然接收interface{}参数，但是参数必须是int 或 string，或是fmt.Sprintf("")
+// FmtPanic (谨慎使用致使程序退出)向终端输出 虽然接收interface{}参数，但是参数必须是int 或 string，或是fmt.Sprintf("")
 func(n *NewLog) FmtPanic(data ...interface{}) {
 	str := timeStr("Panic", data)
 
@@ -17,7 +17,7 @@ func(n *NewLog) FmtPanic(data ...interface{}) {
 
 }
 
-// FilePanic 向log 文件输出 虽然接收interface{}参数，但是参数必须是int 或 string，或是fmt.Sprintf("")
+// FilePanic (谨慎使用致使程序退出)向log 文件输出 虽然接收interface{}参数，但是参数必须是int 或 string，或是fmt.Sprintf("")
 func(n *NewLog) FilePanic(data ...interface{}) {
 	str := timeStr("Panic", data)
 
