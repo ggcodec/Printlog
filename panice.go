@@ -9,7 +9,7 @@ import (
 func(n *NewLog) FmtPanic(data ...interface{}) {
 	str := timeStr("Panic", data)
 
-	_, err := fmt.Fprintln(os.Stdout, colorStr(35, str))
+	_, err := fmt.Fprintf(os.Stdout, colorStr(35, str))
 	if err != nil {
 		os.Exit(12)
 	}
