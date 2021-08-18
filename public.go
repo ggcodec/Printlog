@@ -33,14 +33,14 @@ func colorStr(colorInt int, str string) string {
 func timeStr(level string, data []interface{}) string {
 	now := time.Now()
 	str := now.Format("2006-01-02 #15:04:05 ")
-	str += fmt.Sprintf("[%s]", level)
+	str += fmt.Sprintf("[%s] ", level)
 	for _, v := range data {
 		if value, ok := v.(string); ok {
 			str += " " + value
 		} else if value, ok := v.(int); ok {
 			str += " " + strconv.Itoa(value)
 		} else {
-
+			str += fmt.Sprintf("%v ",v)
 		}
 	}
 	return str
